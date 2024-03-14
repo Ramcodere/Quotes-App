@@ -1,6 +1,5 @@
-
 Quotes App
-Welcome to the Quotes App repository! This web application allows users to create, read, update, and delete (CRUD) quotes. The app is built using MongoDB for data storage, Node.js for server-side scripting with Express.js, and React.js for the frontend. Various tools and libraries such as Axios, react-router-dom, react hooks, Vite.js, webpack, cors, dotenv, and nodemon are also utilized in the development process.
+Welcome to the Quotes App repository! This web application allows users to perform CRUD (Create, Read, Update, Delete) operations on quotes. The app is built using MongoDB for data storage, Node.js for server-side scripting with Express.js, and React.js for the frontend. Various tools and libraries such as Axios, react-router-dom, react hooks, Vite.js, webpack, cors, dotenv, and nodemon are also utilized in the development process.
 
 Features
 CRUD Operations: Users can create, read, update, and delete quotes.
@@ -31,22 +30,32 @@ Dotenv: A zero-dependency module that loads environment variables from a .env fi
 Installation
 Clone the repository to your local machine:
 
+bash
+Copy code
 git clone https://github.com/Ramcodere/quotes-app.git
 Navigate to the project directory:
 
+bash
+Copy code
 cd quotes-app
 Install dependencies for both frontend and backend:
 
+bash
+Copy code
 cd frontend
 npm install
 cd ../backend
 npm install
 Create a .env file in the backend directory and specify your MongoDB connection string:
 
+makefile
+Copy code
 MONGODB_URI=your_mongodb_connection_string
 PORT=8000
 Start the development servers:
 
+bash
+Copy code
 cd frontend
 npm run dev
 cd ../backend
@@ -58,6 +67,8 @@ To deploy the Quotes App, follow these steps:
 
 Build the frontend:
 
+arduino
+Copy code
 cd frontend
 npm run dev
 Copy the contents of the build directory to your web server or hosting provider.
@@ -70,5 +81,10 @@ Contributing
 Contributions are welcome! Feel free to fork the repository and submit pull requests with your enhancements or bug fixes.
 
 Support
-For any questions or issues, please contact at ramkushram120@gmail.com .
+For any questions or issues, please contact at ramkushram120@gmail.com.
+
+
+
+
+
 
