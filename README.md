@@ -5,7 +5,7 @@ Welcome to the Quotes App repository! This web application allows users to perfo
 ## Features
 
 - **CRUD Operations:** Users can create, read, update, and delete quotes.
-- **MongoDB Integration:**Harnesses the power of MongoDB for efficient data storage and retrieval, coupled with Mongoose for seamless schema validation. 
+- **MongoDB Integration:** Harnesses the power of MongoDB for efficient data storage and retrieval, coupled with Mongoose for seamless schema validation. 
 - **RESTful API:** Employs a robust RESTful API architecture, ensuring smooth interactions with your quote database.
 - **Express.js Server:** Leverages the versatility of Express.js for streamlined routing and server-side logic.
 - **React.js Frontend:** Frontend: Crafted with React.js, providing an immersive user experience enriched with dynamic features.
