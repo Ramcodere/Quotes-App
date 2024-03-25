@@ -5,15 +5,15 @@ Welcome to the Quotes App repository! This web application allows users to perfo
 ## Features
 
 - **CRUD Operations:** Users can create, read, update, and delete quotes.
-- **MongoDB Integration:** Utilizes MongoDB as the database management system, with Mongoose for object modeling and schema validation.
-- **RESTful API:** Implements a RESTful API architecture for interacting with the quotes data.
-- **Express.js Server:** Utilizes Express.js to handle routing, middleware, and server-side logic.
-- **React.js Frontend:** Utilizes React.js for building the user interface, including features such as adding quotes, viewing more details, and deleting quotes.
-- **Routing:** Utilizes react-router-dom for client-side routing.
-- **State Management:** Utilizes React hooks for state management within components.
-- **Webpack and Vite.js:** Build tools for bundling and compiling frontend assets.
-- **Axios:** Used for making HTTP requests from the frontend to the backend API.
-- **Cors and dotenv:** Handles cross-origin resource sharing and loads environment variables respectively.
+- **MongoDB Integration:**Harnesses the power of MongoDB for efficient data storage and retrieval, coupled with Mongoose for seamless schema validation. 
+- **RESTful API:** Employs a robust RESTful API architecture, ensuring smooth interactions with your quote database.
+- **Express.js Server:** Leverages the versatility of Express.js for streamlined routing and server-side logic.
+- **React.js Frontend:** Frontend: Crafted with React.js, providing an immersive user experience enriched with dynamic features.
+- **Client-side Routing:** Navigates effortlessly through the app with react-router-dom for smooth client-side routing.
+- **State Management:** Utilizes the power of React hooks for efficient state management within components.
+- **Webpack and Vite.js:** Employs modern build tools for bundling and compiling frontend assets.
+- **HTTP Requests:** Makes use of Axios for seamless communication between frontend and backend.
+- **Cross-Origin Resource Sharing (CORS) and Environment Variables (dotenv):** Ensures secure cross-origin resource sharing and streamlined environment variable management.
 - **Nodemon:** Monitors changes in the backend code and automatically restarts the server.
 
 ## Technologies & Tools Used
