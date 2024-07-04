@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-// import { param } from '../../../../backend/apis/quotesRoutes';
 
 function ShowQuotes() {
     let [quote, setQuote] =useState({ author: "", text: ""});

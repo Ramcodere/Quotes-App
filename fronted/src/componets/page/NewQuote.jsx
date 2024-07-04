@@ -1,59 +1,163 @@
 
 
+// import React, { useRef } from 'react';
+// import axios from 'axios';
+// import { useNavigate } from "react-router-dom";
+
+
+// function NewQuote() {
+//   let navigate = useNavigate();
+//   let usernameInputRef = useRef();
+//   let quoteInputRef = useRef();
+  
+
+//   //react is single page application
+//   async function addQuotesHandler(e) { 
+//   // aise karne se page refress hote hai to ye nhi krna chaiye usko thik karne ke sabse phele liye >>
+
+//    e.preventDefault();    
+//    //Aisa kane se page refress ni hota hai
+
+//   let author = usernameInputRef.current.value;
+//   let text = quoteInputRef.current.value;
+
+//   try{
+//    let res = await axios.post('http://localhost:8080/addquotes', {
+//     author,
+//     text,
+//   });
+//    //navigate matlb '/' bale route ko hit ya tick karo
+//    navigate('/');
+
+
+//   }
+//   catch(e){
+//     console.log("cannot crete a quote")
+//   }
+
+//   }
+
+//   return (
+
+
+
+
+//     <div>
+//       <form onSubmit={addQuotesHandler}>
+//         <div>
+//           <label htmlFor='naam'>Author: </label>
+//           <input type='text' placeholder="Author's Name" id='naam' ref={ usernameInputRef} /> 
+//         </div>
+//         <div>
+//           <label htmlFor='textt'>Quote: </label>
+//           <textarea id='textt' cols="30" rows="4" placeholder="Author's Quote" ref={ quoteInputRef} ></textarea>
+
+//         </div>
+//            <button>Add Quote</button>
+        
+//       </form>
+//     </div>
+
+
+
+
+
+
+//   )
+// }
+
+// export default NewQuote;
+
+// //-------------------------------------------------------------------------------------------------------------------------------------------
+
+
 import React, { useRef } from 'react';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom';
 
 function NewQuote() {
   let navigate = useNavigate();
   let usernameInputRef = useRef();
   let quoteInputRef = useRef();
-  
 
-  //react is single page application
-  async function addQuotesHandler(e) { 
-  // aise karne se page refress hote hai to ye nhi krna chaiye usko thik karne ke sabse phele liye >>
+  async function addQuotesHandler(e) {
+    e.preventDefault();
 
-   e.preventDefault();    
-   //Aisa kane se page refress ni hota hai
+    let author = usernameInputRef.current.value;
+    let text = quoteInputRef.current.value;
 
-  let author = usernameInputRef.current.value;
-  let text = quoteInputRef.current.value;
-
-  try{
-   let res = await axios.post('http://localhost:8080/addquotes', {
-    author,
-    text,
-  });
-   //navigate matlb '/' bale route ko hit ya tick karo
-   navigate('/');
-
-
-  }
-  catch(e){
-    console.log("cannot crete a quote")
+    try {
+      let res = await axios.post('http://localhost:8080/addquotes', {
+        author,
+        text,
+      });
+      navigate('/');
+    } catch (e) {
+      console.log('cannot create a quote');
+    }
   }
 
-  }
+  const containerStyle = {
+    maxWidth: '600px',
+    margin: '50px auto',
+    padding: '20px',
+    backgroundColor: '#fff',
+    border: '1px solid #ccc',
+    borderRadius: '10px',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+  };
+
+  const formStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+  };
+
+  const labelStyle = {
+    marginBottom: '5px',
+    fontWeight: 'bold',
+  };
+
+  const inputStyle = {
+    marginBottom: '15px',
+    padding: '10px',
+    border: '1px solid #ccc',
+    borderRadius: '5px',
+  };
+
+  const buttonStyle = {
+    backgroundColor: '#007bff',
+    color: 'white',
+    border: 'none',
+    padding: '10px 15px',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    marginTop: '10px',
+    alignSelf: 'flex-start',
+  };
+
+  const buttonHoverStyle = {
+    backgroundColor: '#0056b3',
+  };
 
   return (
-    <div>
-      <form onSubmit={addQuotesHandler}>
+    <div style={containerStyle}>
+      <form onSubmit={addQuotesHandler} style={formStyle}>
         <div>
-          <label htmlFor='naam'>Author: </label>
-          <input type='text' placeholder="Author's Name" id='naam' ref={ usernameInputRef} /> 
+          <label htmlFor="naam" style={labelStyle}>
+            Author:
+          </label>
+          <input type="text" placeholder="Author's Name" id="naam" ref={usernameInputRef} style={inputStyle} />
         </div>
         <div>
-          <label htmlFor='textt'>Quote: </label>
-          <textarea id='textt' cols="30" rows="4" placeholder="Author's Quote" ref={ quoteInputRef} ></textarea>
-
+          <label htmlFor="textt" style={labelStyle}>
+            Quote:
+          </label>
+          <textarea id="textt" cols="30" rows="4" placeholder="Author's Quote" ref={quoteInputRef} style={inputStyle}></textarea>
         </div>
-           <button>Add Quote</button>
-        
+        <button style={{ ...buttonStyle, ':hover': buttonHoverStyle }}>Add Quote</button>
       </form>
     </div>
-  )
+  );
 }
 
 export default NewQuote;
