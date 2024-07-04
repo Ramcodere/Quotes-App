@@ -16,7 +16,7 @@ function NewQuote() {
     let text = quoteInputRef.current.value;
 
     try {
-      let res = await axios.post('http://localhost:8080/addquotes', {
+      let res = await axios.post('https://quotes-app-backend-n3xj.onrender.com', {
         author,
         text,
       });
