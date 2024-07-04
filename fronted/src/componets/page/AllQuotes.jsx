@@ -8,7 +8,7 @@ function AllQuotes() {
   
   useEffect(function () {
     async function getQuotes() {
-     const res = await axios.get("http://localhost:8080/allquotes");
+     const res = await axios.get("https://quotes-app-backend-n3xj.onrender.com");
       // console.log(res, "sam");
       setQuotes(res.data);
 
